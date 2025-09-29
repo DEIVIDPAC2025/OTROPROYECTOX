@@ -1,3 +1,5 @@
+
+```mermaid
 flowchart TD
     A([Inicio]) --> B[Validar parámetros]
 
