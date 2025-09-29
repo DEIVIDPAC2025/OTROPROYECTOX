@@ -27,3 +27,17 @@ flowchart TD
     P --> Q[Enviar correos OK/ERROR]
     Q --> R[Fin]
 
+
+```markdown
+- [ejecutaRemoto](diagrams/ejecutaRemoto.svg)
+- [copiaRemota](diagrams/copiaRemota.svg)
+- [mismoLargo](diagrams/mismoLargo.svg)
+- [obligadoSinF29](diagrams/obligadoSinF29.svg)
+- [copiaHaciaPluton](diagrams/copiaHaciaPluton.svg)
+- [ejecutaRemotoAtrib](diagrams/ejecutaRemotoAtrib.svg)
+- [recuperaAnotados](diagrams/recuperaAnotados.svg)
+- [recuperaAtributos](diagrams/recuperaAtributos.svg)
+- [rcpPlutonAnotar](diagrams/rcpPlutonAnotar.svg)
+- [escenario10](diagrams/escenario10.svg)
+- [escenario7](diagrams/escenario7.svg)
+- [escenarioVarios](diagrams/escenarioVarios.svg)
