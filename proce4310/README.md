@@ -31,7 +31,7 @@ flowchart TD
 
     G --> H[["Proceso<br/><a href='https://www.plantuml.com/plantuml/svg/dT31IiD040RW-px575k48hIXa1HjHIk5eiMavx1k9idMpOxCJgelvSa74EoBIOCA7cgXjs7uP-PZfa4qIziuM34P3AJ4YaD8syVIjHkAV_jTKCLBH0RDfhPRWe0EZUJ5XlEjhT0BXe4BagXuRfsmPc2iR12c08OycDrxOIk2SNG-J5HyYnxtePzrCq-Y2mhvP8wcrXS3UPL4sH9wdnytpCIWNvwwuSi-I8qUUkdkhQy0uYLL0SwWqTO1xgE90WX2pmfzOKjrLFIVPpmy8Zh5y-UHYxiidsKFYwjrTd-THgDXFl4hP4i5VTyyYEl2XtJHw0HQLq_H5stZlW00'>Ver subflujo</a>"]]
     H --> I[Forzar anotación 7503 dummy]
-    I --> J[Contar registros (7503, 73, 543)]
+    I --> J["Contar registros (7503, 73, 543)"]
     J --> K[Ejecutar Procesa4310 con archivos generados]
 
     K -->|Error| E
@@ -47,7 +47,7 @@ flowchart TD
     P -->|Error| E
     P -->|OK| Q[Generar CTLFILE para revisión diferida]
 
-    Q --> R[Programar ejecución con `at` (20h después)]
+    Q --> R["Programar ejecución con `at` (20h después)"]
     R --> S[Fin]
 
     %% Subflujo común de errores
