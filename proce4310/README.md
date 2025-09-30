@@ -10,4 +10,52 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 
 ---
 
-## 🔹 Flujo Principal
+# Flujo principal - Proceso Batch `proce4310.sh`
+
+El siguiente diagrama representa el flujo principal en Mermaid.  
+Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archivo `.svg` exportado desde PlantUML.
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B["Validar parámetros (nPeriodo, nEscenario)"]
+    B --> C{¿Existen archivos de entrada?}
+    C -- No --> D[Logs + enviar mail error]
+    D --> Z1[Fin]
+
+    C -- Sí --> E["Configurar entorno (Producción/Desarrollo)"]
+    E --> F[Inicializar logs]
+
+    F --> G[Revisa_SID_ULTIMA]
+    G --> H{¿nObligados >= nNotNull?}
+    H -- No --> I[Logs + enviar mail error]
+    I --> Z2[Fin]
+    H -- Sí --> J[Continuar]
+
+    J --> K[Ejecutar Proceso]
+    K --> L[Forzar anotación 7503 dummy]
+    L --> M["Contar registros (7503, 73, 543)"]
+    M --> N[Ejecutar Procesa4310 con archivos generados]
+
+    N --> O{¿Error en Procesa4310?}
+    O -- Sí --> P[Logs + mail error]
+    P --> Z3[Fin]
+    O -- No --> Q[Generar archivo AnotaMensual4310 si Escenario=2]
+    Q --> R[Copiar y comprimir archivos de salida]
+
+    R --> S[Enviar correo final con resultados]
+    S --> T[MarcaUltPerProcesado]
+    T --> U{¿Error en MarcaUltPerProcesado?}
+    U -- Sí --> V[Logs + mail error]
+    V --> Z4[Fin]
+
+    U -- No --> W[Generar CTLFILE para revisión diferida]
+    W --> X["Programar ejecución con at (20h después)"]
+    X --> Z5[Fin]
+
+    %% --- Subflujos con enlaces a los .svg ---
+    click D "logs.svg" "Abrir subflujo Logs"
+    click G "revisa_sid_ultima.svg" "Abrir subflujo Revisa_SID_ULTIMA"
+    click T "marcaUltPerProcesado.svg" "Abrir subflujo MarcaUltPerProcesado"
+    click K "proceso.svg" "Abrir subflujo Proceso"
+
+
