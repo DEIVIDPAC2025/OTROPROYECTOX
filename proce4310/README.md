@@ -17,12 +17,12 @@ Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archi
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B[Validar parámetros (nPeriodo, nEscenario)]
+    A[Inicio] --> B["Validar parámetros (nPeriodo, nEscenario)"]
     B --> C{¿Existen archivos de entrada?}
     C -- No --> D[Logs + enviar mail error]
     D --> Z1[Fin]
 
-    C -- Sí --> E[Configurar entorno (Producción/Desarrollo)]
+    C -- Sí --> E["Configurar entorno (Producción/Desarrollo)"]
     E --> F[Inicializar logs]
 
     F --> G[Revisa_SID_ULTIMA]
