@@ -22,7 +22,7 @@ Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archi
 flowchart TD
     A[Inicio] --> B["Validar parámetros<br/>(nPeriodo, nEscenario)"]
     B -->|Archivos no existen| E[["Error<br/><a href='https://www.plantuml.com/plantuml/svg/JSqn3i8m343HtQVm218IUxeK2JOa1axW9cwJoeshsE7y2CJ0_FNqHtDgtZT1qSN0YmlZiq-pz5K3tdMnmyRLQEKJ9dOIuIDy4OJ7v5ovuSmnqpbh8wJedMI0SBFOobGQ_ZHonQZLL6Y0SDbthkc_KOkvlFHpl9Ah3M2kEunSKz_a3G00'>Ver subflujo</a>"]]
-    B -->|Archivos existen| C[Configurar entorno<br/>(Producción/Desarrollo)]
+    B -->|Archivos existen| C["Configurar entorno<br (Producción/Desarrollo)"]
     C --> D[Inicializar logs]
 
     D --> F[["Revisa_SID_ULTIMA<br/><a href='https://www.plantuml.com/plantuml/svg/RSon2i8m483XFKznWuCAwjw2A5erK5kqEfThSqfAcaXoqK5yTz75nVt__aLWz1nx0qUwwu1r9TVrEJ_9_LAmPaDGnUPYOkUIFyKNYoGdyj1wKcHRZOO2A8B1SrVkizSiQ3MzFLGgagoZDZ9wg0uvJERGkcXvE1u1MM1i3C9lNSjYKzPodHKdkP6hvKgMHIgIRKIlq8Ed40sZSXzhoyReAoeNKX7OtSI2h8gzUGC0'>Ver subflujo</a>"]]
