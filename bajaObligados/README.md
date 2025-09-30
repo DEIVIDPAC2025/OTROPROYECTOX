@@ -1,3 +1,15 @@
+# Flujo de Proceso: Obligados a Declarar F29
+
+Nombre Shell: bajaObligado.sh
+
+Descripcion: Permite obtener un listado de contribuyente obligados a declarar el formulario F9. La shell bajaObligado.sh, se conecta a la maquina pluton (ambiente de dominio RIAC)
+donde se ejecuta un procedimiento almacenado. Este proceso bajaObligado.sh almacena y deja en una carpeta llamada obligado, un archivo llamado obl_<añomes> con registros de contribuyentes. (En produccion son aprox 1,6mill de registros) 
+
+Este documento describe el **flujo principal** y permite navegar hacia los **subflujos auxiliares** del script `bajaObligados`.
+
+---
+
+## 🔹 Flujo Principal
 
 ```mermaid
 flowchart TD
