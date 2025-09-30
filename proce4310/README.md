@@ -10,57 +10,52 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 
 ---
 
-## 🔹 Flujo Principal
+# Flujo principal - Proceso Batch `proce4310.sh`
 
-# Documentación del Proceso Batch `proce4310.sh`
+El siguiente diagrama representa el flujo principal en Mermaid.  
+Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archivo `.svg` exportado desde PlantUML.
 
-Este proceso tiene como objetivo generar anotaciones masivas (4310) en base a información entregada por Riac.  
-El batch realiza validaciones, prepara archivos de entrada y salida, ejecuta procesos en Oracle y genera logs y notificaciones.
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Validar parámetros (nPeriodo, nEscenario)]
+    B --> C{¿Existen archivos de entrada?}
+    C -- No --> D[Logs + enviar mail error]
+    D --> Z1[Fin]
 
----
+    C -- Sí --> E[Configurar entorno (Producción/Desarrollo)]
+    E --> F[Inicializar logs]
 
-## 📊 Diagrama de Flujo Principal
+    F --> G[Revisa_SID_ULTIMA]
+    G --> H{¿nObligados >= nNotNull?}
+    H -- No --> I[Logs + enviar mail error]
+    I --> Z2[Fin]
+    H -- Sí --> J[Continuar]
 
-![Flujo Principal](./diagrams/proce4310_main.svg)
+    J --> K[Ejecutar Proceso]
+    K --> L[Forzar anotación 7503 dummy]
+    L --> M[Contar registros (7503, 73, 543)]
+    M --> N[Ejecutar Procesa4310 con archivos generados]
 
----
+    N --> O{¿Error en Procesa4310?}
+    O -- Sí --> P[Logs + mail error]
+    P --> Z3[Fin]
+    O -- No --> Q[Generar archivo AnotaMensual4310 si Escenario=2]
+    Q --> R[Copiar y comprimir archivos de salida]
 
-## 🔧 Subflujos Auxiliares
+    R --> S[Enviar correo final con resultados]
+    S --> T[MarcaUltPerProcesado]
+    T --> U{¿Error en MarcaUltPerProcesado?}
+    U -- Sí --> V[Logs + mail error]
+    V --> Z4[Fin]
 
-### 1. Logs
-Función encargada de registrar mensajes en consola y en el archivo de log.
+    U -- No --> W[Generar CTLFILE para revisión diferida]
+    W --> X[Programar ejecución con at (20h después)]
+    X --> Z5[Fin]
 
-![Subflujo Logs](./diagrams/proce4310_logs.svg)
-
----
-
-### 2. Revisa_SID_ULTIMA
-Valida en la tabla `SID_ULTIMA_INFO_IDENTIFICACION` la cantidad de obligados no nulos.  
-Si no cumple la condición mínima, aborta el proceso.
-
-![Subflujo Revisa_SID_ULTIMA](./diagrams/proce4310_revisa_sid_ultima.svg)
-
----
-
-### 3. MarcaUltPerProcesado
-Actualiza el parámetro `ULTIMO_PROCESO_NODECLARANTE` en la tabla `SID_PARAMETROS` para marcar el último periodo procesado.
-
-![Subflujo MarcaUltPerProcesado](./diagrams/proce4310_marca_ultper.svg)
-
----
-
-### 4. Proceso
-Genera archivos de anotación a partir de la fiscalización:  
-- `7503`  
-- `73`  
-- `543`
-
-Cada bloque maneja errores individuales (awk, creación de archivo, etc.).
-
-![Subflujo Proceso](./diagrams/proce4310_proceso.svg)
-
----
-
-## 📂 Estructura sugerida de archivos
+    %% --- Subflujos con enlaces a los .svg ---
+    click D "subflujo_logs.svg" "Abrir subflujo Logs"
+    click G "subflujo_revisa_sid_ultima.svg" "Abrir subflujo Revisa_SID_ULTIMA"
+    click T "subflujo_marcaUltPerProcesado.svg" "Abrir subflujo MarcaUltPerProcesado"
+    click K "subflujo_proceso.svg" "Abrir subflujo Proceso"
 
 
