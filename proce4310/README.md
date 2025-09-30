@@ -33,7 +33,7 @@ flowchart TD
 
     J --> K[Ejecutar Proceso]
     K --> L[Forzar anotación 7503 dummy]
-    L --> M[Contar registros (7503, 73, 543)]
+    L --> M["Contar registros (7503, 73, 543)"]
     M --> N[Ejecutar Procesa4310 con archivos generados]
 
     N --> O{¿Error en Procesa4310?}
