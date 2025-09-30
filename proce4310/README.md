@@ -53,9 +53,9 @@ flowchart TD
     X --> Z5[Fin]
 
     %% --- Subflujos con enlaces a los .svg ---
-    click D "logs.svg" "Abrir subflujo Logs"
-    click G "Revisa_SID_ULTIMA.svg" "Abrir subflujo Revisa_SID_ULTIMA"
-    click T "MarcaUltPerProcesado.svg" "Abrir subflujo MarcaUltPerProcesado"
-    click K "Proceso.svg" "Abrir subflujo Proceso"
+    click D "logs.png" "Abrir subflujo Logs"
+    click G "Revisa_SID_ULTIMA.png" "Abrir subflujo Revisa_SID_ULTIMA"
+    click T "MarcaUltPerProcesado.png" "Abrir subflujo MarcaUltPerProcesado"
+    click K "Proceso.png" "Abrir subflujo Proceso"
 
 
