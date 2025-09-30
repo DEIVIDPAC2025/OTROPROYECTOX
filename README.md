@@ -1,4 +1,9 @@
-# 📊 Flujo de Proceso: bajaObligados
+# Flujo de Proceso: Obligados a Declarar F29
+
+Nombre Shell: bajaObligado.sh
+
+Descripcion: Permite obtener un listado de contribuyente obligados a declarar el formulario F9. La shell bajaObligado.sh, se conecta a la maquina pluton (ambiente de dominio RIAC)
+donde se ejecuta un procedimiento almacenado. Este proceso bajaObligado.sh almacena y deja en una carpeta llamada obligado, un archivo llamado obl_<añomes> con registros de contribuyentes. (En produccion son aprox 1,6mill de registros) 
 
 Este documento describe el **flujo principal** y permite navegar hacia los **subflujos auxiliares** del script `bajaObligados`.
 
@@ -20,7 +25,6 @@ flowchart TD
     G --> H[["ejecutaRemotoAtrib<br/><a href='https://www.plantuml.com/plantuml/svg/HSjDYi9040NWVPsYb2nqeUWsZMYG88A_6LrBcovDIz8brPsPHV18diAB3T65k_U-nvlve2NKLObqexmEEgEA0oT1x1dU6yGhlc9NV87MsTpgSkYBheAubQXP9_lZSfESidIzFIGF79GODVDZkZbyxVl3g74x4ik67mhYHQt5QC4vcuo20h0Nx7qATYOuclOn5EImz_DwzW4nJjslrO8vYn0ZYR2erlrVskR9M04vOo_W0zzXHixKLVaF)'>Ver subflujo</a>"]]
     H --> I[["recuperaAnotados<br/><a href='https://www.plantuml.com/plantuml/svg/TOvBQW91443tTOeAk508-ModaIXXo2wAqNKefahIu5HDggir81uc1yWfl5XGiitkyTxcpKgGH-rtwDBLGPpcQa5i1Qu56ky6f3_tFZhgKZmRs-aklW9P2Wlsv-_FcfNGfRUW17cBusVZbGJUJF7XQOBn8OhZj_FF112RLlUP73jp5qDnDqyNNmxjXQUF2KGvRm6QXRCe-Iso3DN94pGlbPp9KHH7nzLcFMzVrwVx_nuJbB01Pg9S-zql'>Ver subflujo</a>"]]
     I --> J[["recuperaAtributos<br/><a href='https://www.plantuml.com/plantuml/svg/TOv1IWD144NtTOeIiaX0D6wd2IR8uCw46DTIJbL8GwPx_5qTXP33U01FaOj919Vk7kzjthoum6k_PrXN1uCi7F6jUYxqcwX1Dx3yoTVHCQqCCMi-tVYdirfHu_xyzLvZ4eRrsILGtFBu8UlQdAzcFBsViEyiyVZv_3qXvgPDXoZWBWEMsO2CSF7bextmx2wG9OrRecO9jIIuPhMXGX2eUQm25R0b7XtNBvj5-xGvtVux6QXu7cXkIMk__m40'>Ver subflujo</a>"]]
-
     J --> K{Escenario}
     K -->|10| L[["escenario10<br/><a href='https://www.plantuml.com/plantuml/svg/jP11IiH044NtVOelk9ZPXCIT2OC36bSYek1MokwAbcIwfBgY0-AHF8KN4sS654HtxehFvxz7BOkJ-RGQmILo9XDjwh09GtlD9eD4Cl1QYdEEGg2iJadBpVvBlc0JJVfQ-Tgx80Dcvxhh7itXzvmnktf_cmUWxVEJa26g6IlOJAqBG75z39oJ3E4te9lSJlu_nFw1u-HaEE4uakdfmI6gglhw1ffwopdMTCcElGNg7wGplTlkVvlf_b1eotF_UI-QRcUoaLfoJjDg_000'>Ver subflujo</a>"]]
     K -->|7| M[["escenario7<br/><a href='https://www.plantuml.com/plantuml/svg/VOwnQW9H44NxznKtdJPBj97i8X5qKuKK4TAFRsTrP7qJvisg-QXyXJyMeW458Ttb5kUSMNOoxtSTE4TEPAAJSFv2-S4chKGoaCMDx3M3aZercl45SfDLxvgh82q6Rme-IdPEpqFuXXC6ozFtC01bdVP2XgXch60pjIe0sVKpS6ga3Q6ijnnx9yE2OqUcB-Cd54LnhSBaufbhyywEXoaUxqIlkhxWRoZLFmLbFjI_Upgg_aBEJJDEJR_hVW00'>Ver subflujo</a>"]]
@@ -33,4 +37,8 @@ flowchart TD
     O --> P[Respaldo archivos]
     P --> Q[Enviar correos OK/ERROR]
     Q --> R([Fin])
+
+
+
+
 
