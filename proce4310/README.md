@@ -41,7 +41,7 @@ flowchart TD
     %% Subflujo común de errores
     E --> S
 
-
+---
 
 flowchart TD
     A[Inicio] --> B["Validar parámetros (nPeriodo, nEscenario)"]
