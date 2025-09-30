@@ -11,3 +11,56 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 ---
 
 ## 🔹 Flujo Principal
+
+# Documentación del Proceso Batch `proce4310.sh`
+
+Este proceso tiene como objetivo generar anotaciones masivas (4310) en base a información entregada por Riac.  
+El batch realiza validaciones, prepara archivos de entrada y salida, ejecuta procesos en Oracle y genera logs y notificaciones.
+
+---
+
+## 📊 Diagrama de Flujo Principal
+
+![Flujo Principal](./diagrams/proce4310_main.svg)
+
+---
+
+## 🔧 Subflujos Auxiliares
+
+### 1. Logs
+Función encargada de registrar mensajes en consola y en el archivo de log.
+
+![Subflujo Logs](./diagrams/proce4310_logs.svg)
+
+---
+
+### 2. Revisa_SID_ULTIMA
+Valida en la tabla `SID_ULTIMA_INFO_IDENTIFICACION` la cantidad de obligados no nulos.  
+Si no cumple la condición mínima, aborta el proceso.
+
+![Subflujo Revisa_SID_ULTIMA](./diagrams/proce4310_revisa_sid_ultima.svg)
+
+---
+
+### 3. MarcaUltPerProcesado
+Actualiza el parámetro `ULTIMO_PROCESO_NODECLARANTE` en la tabla `SID_PARAMETROS` para marcar el último periodo procesado.
+
+![Subflujo MarcaUltPerProcesado](./diagrams/proce4310_marca_ultper.svg)
+
+---
+
+### 4. Proceso
+Genera archivos de anotación a partir de la fiscalización:  
+- `7503`  
+- `73`  
+- `543`
+
+Cada bloque maneja errores individuales (awk, creación de archivo, etc.).
+
+![Subflujo Proceso](./diagrams/proce4310_proceso.svg)
+
+---
+
+## 📂 Estructura sugerida de archivos
+
+
