@@ -20,7 +20,7 @@ Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archi
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B["Validar parámetros<br/>(nPeriodo, nEscenario)"]
+    A[Inicio] --> B["Validar parámetros(nPeriodo, nEscenario)"]
     B -->|Archivos no existen| E[["Error<br/><a href='https://www.plantuml.com/plantuml/svg/JSqn3i8m343HtQVm218IUxeK2JOa1axW9cwJoeshsE7y2CJ0_FNqHtDgtZT1qSN0YmlZiq-pz5K3tdMnmyRLQEKJ9dOIuIDy4OJ7v5ovuSmnqpbh8wJedMI0SBFOobGQ_ZHonQZLL6Y0SDbthkc_KOkvlFHpl9Ah3M2kEunSKz_a3G00'>Ver subflujo</a>"]]
     B -->|Archivos existen| C["Configurar entorno<br (Producción/Desarrollo)"]
     C --> D[Inicializar logs]
@@ -28,21 +28,16 @@ flowchart TD
     D --> F[["Revisa_SID_ULTIMA<br/><a href='https://www.plantuml.com/plantuml/svg/RSon2i8m483XFKznWuCAwjw2A5erK5kqEfThSqfAcaXoqK5yTz75nVt__aLWz1nx0qUwwu1r9TVrEJ_9_LAmPaDGnUPYOkUIFyKNYoGdyj1wKcHRZOO2A8B1SrVkizSiQ3MzFLGgagoZDZ9wg0uvJERGkcXvE1u1MM1i3C9lNSjYKzPodHKdkP6hvKgMHIgIRKIlq8Ed40sZSXzhoyReAoeNKX7OtSI2h8gzUGC0'>Ver subflujo</a>"]]
     F -->|nObligados < nNotNull| E
     F -->|OK| G[Continuar]
-
     G --> H[["Proceso<br/><a href='https://www.plantuml.com/plantuml/svg/dT31IiD040RW-px575k48hIXa1HjHIk5eiMavx1k9idMpOxCJgelvSa74EoBIOCA7cgXjs7uP-PZfa4qIziuM34P3AJ4YaD8syVIjHkAV_jTKCLBH0RDfhPRWe0EZUJ5XlEjhT0BXe4BagXuRfsmPc2iR12c08OycDrxOIk2SNG-J5HyYnxtePzrCq-Y2mhvP8wcrXS3UPL4sH9wdnytpCIWNvwwuSi-I8qUUkdkhQy0uYLL0SwWqTO1xgE90WX2pmfzOKjrLFIVPpmy8Zh5y-UHYxiidsKFYwjrTd-THgDXFl4hP4i5VTyyYEl2XtJHw0HQLq_H5stZlW00'>Ver subflujo</a>"]]
     H --> I[Forzar anotación 7503 dummy]
     I --> J["Contar registros (7503, 73, 543)"]
     J --> K[Ejecutar Procesa4310 con archivos generados]
-
     K -->|Error| E
     K -->|OK| L[Escenario 2?]
-
-    L -->|Sí| M[Generar archivo AnotaMensual4310<br/>Copiar/comprimir archivos]
+    L -->|Sí| M["Generar archivo AnotaMensual4310<br/>Copiar/comprimir archivos"]
     L -->|No| N[Comprimir archivos de salida]
-
     M --> O[Enviar correo final con resultados]
     N --> O
-
     O --> P[["MarcaUltPerProcesado<br/><a href='https://www.plantuml.com/plantuml/svg/RO-zQiCm601tFSL7A6HhTvj0r5Yb0SaIijtLADBNLa6sZ7x8KFhkfStQ-Ow3E-PYKgbB066IDLCe2fDAqM8sBfBYIq0OwkKzr6ji_fV-4gJXY0biGeUhzIPW1eVmyFKg1Vj-ojuzRZVNaePTqTPY4aogeoE3uTpDYcegsAZbG00o5b1KY_cDSgaFgyBaeui4uFQ92U-ib-9PiyD-ukDPo5bfUMA3d7lPiHEdclOZsxUaiN5PV6b9m-D7XjsBNs7vNO3j7jsr99UuaIEkhYxX1m00'>Ver subflujo</a>"]]
     P -->|Error| E
     P -->|OK| Q[Generar CTLFILE para revisión diferida]
