@@ -49,7 +49,7 @@ flowchart TD
     V --> Z4[Fin]
 
     U -- No --> W[Generar CTLFILE para revisión diferida]
-    W --> X[Programar ejecución con at (20h después)]
+    W --> X["Programar ejecución con at (20h después)"]
     X --> Z5[Fin]
 
     %% --- Subflujos con enlaces a los .svg ---
