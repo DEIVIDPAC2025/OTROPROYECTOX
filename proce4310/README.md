@@ -15,6 +15,46 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 El siguiente diagrama representa el flujo principal en Mermaid.  
 Cada nodo que corresponde a un **subflujo auxiliar** contiene un enlace al archivo `.svg` exportado desde PlantUML.
 
+
+# Flujo principal - Proceso Batch `proce4310.sh`
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Validar parámetros<br/>(nPeriodo, nEscenario)]
+    B -->|Archivos no existen| E[["Error<br/><a href='subflujo_logs.svg'>Ver subflujo</a>"]]
+    B -->|Archivos existen| C[Configurar entorno<br/>(Producción/Desarrollo)]
+    C --> D[Inicializar logs]
+
+    D --> F[["Revisa_SID_ULTIMA<br/><a href='subflujo_revisa_sid_ultima.svg'>Ver subflujo</a>"]]
+    F -->|nObligados < nNotNull| E
+    F -->|OK| G[Continuar]
+
+    G --> H[["Proceso<br/><a href='subflujo_proceso.svg'>Ver subflujo</a>"]]
+    H --> I[Forzar anotación 7503 dummy]
+    I --> J[Contar registros (7503, 73, 543)]
+    J --> K[Ejecutar Procesa4310 con archivos generados]
+
+    K -->|Error| E
+    K -->|OK| L[Escenario 2?]
+
+    L -->|Sí| M[Generar archivo AnotaMensual4310<br/>Copiar/comprimir archivos]
+    L -->|No| N[Comprimir archivos de salida]
+
+    M --> O[Enviar correo final con resultados]
+    N --> O
+
+    O --> P[["MarcaUltPerProcesado<br/><a href='subflujo_marca_ult_per_procesado.svg'>Ver subflujo</a>"]]
+    P -->|Error| E
+    P -->|OK| Q[Generar CTLFILE para revisión diferida]
+
+    Q --> R[Programar ejecución con `at` (20h después)]
+    R --> S[Fin]
+
+    %% Subflujo común de errores
+    E --> S
+
+
+
 ```mermaid
 flowchart TD
     A[Inicio] --> B["Validar parámetros (nPeriodo, nEscenario)"]
