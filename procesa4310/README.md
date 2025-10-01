@@ -54,7 +54,7 @@ flowchart TD
     %% Escenario 2
     E -->|2| G1["Leer Obligados desde BD"]
     G1 --> G2["Cruzar con archivo de Riac"]
-    G2 --> G3[["obligadoYcompararTG<br/><a href='./obligadoYcompararTG.svg'>Ver subflujo</a>"]]
+    G2 --> G3[["obligadoYcompararTG<br/><a href='https://www.plantuml.com/plantuml/svg/bPBDIWCn4CVlUOfXGMWF5Tk3XrsebLfxKOIs2fvaTfDjKv9CcIIY3-Kp2FfYafLsMzoBjoJp__WnPE83SeZM09L6hr7ISqLsXuoycekWWr6mZ6LjufPWq2aIJOGG-PIS3nmrWoDRil8W5I1N6_rAkMZD_kNiujB8y_0MEbw9fHW0np0bjvgVI6jjGjFPlXP2vDSbQzuNTRL0GWNbAzOXCYRFGbN4h1ZSmrvVY7oM9ALcM3oku1rkda2vly79FrNCs9PATJgURLKL0p9KPD590f5vuW23sEeQil7HdLXcXH2wXjxNvuoPEDKdtrKVmaOvw2s_F_e28B-ZDMItQ0o1CMXH8Y1uxOEo2CEi4Cf9NNU3L6Gj38QZmuuRa1CC6BUxJjCEh9JoFwpH4TOz-PIU4F2mnDzAIR1MJgL3aVuMxSH4EHcj-G40'>Ver subflujo</a>"]]
     G3 --> F3
 
     %% Escenario 3
