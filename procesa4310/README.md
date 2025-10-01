@@ -73,7 +73,7 @@ flowchart TD
     J --> J2[["FCreaArchivo<br/><a href='./FCreaArchivo.svg'>Ver subflujo</a>"]]
 
     J2 --> K["Enviar notificación por correo"]
-    K --> K2[["iEnviaMail<br/><a href='./iEnviaMail.svg'>Ver subflujo</a>"]]
+    K --> K2[["iEnviaMail<br/><a href='https://www.plantuml.com/plantuml/svg/bLPjRkCs4FslKmpG7vi2sy2I9LdERXUhBnO5jXz0sWECgR72X2Az99N0BNAOdg57s8iLaXn0aYFKqK-zcVU6Zmy3VhOEZMiR2Q9KZm9_GI4z9vmak6rtUzdUQ_XXZ7dluCV_-Rnta1f-9nxr3LXtb6Il3sqZB-cq3q8Tq603jrqZM6S4TqCpqwhIS0IoJaWDDIaoA4SjE-GFjT6jgd8jjO7lMF-DAkmTLlf9g1gSQMa4dBgC8WD-D08AscCh7TFA_OeDGMh4H7E4tug_2FnW0UoFizEo6k6fCVhfZpl17nHP2y5rC0TF1waD7YzrdZjjoC8HShJQGaNmfzLlynuxZc5YV2Ah6vg3yBS7aCtzBi8oPdw7Q5EHEVqDaasOnXvq5-XE__meNCShxtd4srhYQEbrPfQpTSxcpDbc6wsoAVEcYEDLuZrVQ5SXi3ROO6_KBV6M51VuDhiiVUtQXj77rnQKuIfQUm1Vn9w-24MJwKyUZD0pF-CoPOa7y3iQ9xWue79JYYnacs1MC6SfCnQnpgK27UxGJgVOP47evsFqpFkqo8hEqOiCpINQFdw_xUx9QVisAxb4QnSYi2spCfr7O1i4MU1F8n27Vkd7at3ftJrnjq0Si925S-B8Zz8e7N9KAYVS4QuQNP7KNL8gTDf-Fn_yuqVgApzzUbsfJ5ZCrdCbFytoRJuePLqrcYDS2UN8x95JdypMjcY4VaLnT-fOqcH5MPJvN3DVhRT1DcZcMZcZ9Lp9R__MWcEdfwZM_5KzFbGlofLiMsxcSaMOvglYHKvAuavePU5A2klGlWSqXcgfxNlWwBxz8tKzjNUulqxzfNdHuvUqJtVGDbbbsuktGgwRWrQaN9_aWkn12gfRUcEONrWMqv2mw2mD_YQ9mscWLrcq3gD9eBdKRRNaG56orPmtpjTXifvmxBMio2p69YlEIF8qPduv8VdQKhkmj8k8HULvt8ja7IOJZkgqUXP66VRFZEQqjvuzp_FwDuntyrF_8Z20m-C3U4lceA518JzuDp-hHytHWEL671nqBnhTlMYkxTq7ppfzy3wJgjf6_WS0'>Ver subflujo</a>"]]
 
     K2 --> END([Fin])
 
