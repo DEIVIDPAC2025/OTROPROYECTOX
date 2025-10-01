@@ -20,15 +20,15 @@ flowchart TD
     A([Inicio del programa (main)]) --> B[Leer parámetros de entrada (argc, argv)]
 
     %% Validación de parámetros
-    B -->|No válidos| C[Mostrar uso (modo_uso)] --> STOP1([Stop])
+    B -->|No válidos| C["Mostrar uso (modo_uso)]" --> STOP1([Stop])
     B -->|Sí válidos| D[Conectar a BD]
 
     %% Conexión a BD
     D -->|Error| ERR[Error de conexión] --> STOP2([Stop])
-    D -->|OK| E{Escenario (1,2,3)}
+    D -->|OK| E{"Escenario (1,2,3)"}
 
     %% Escenario 1
-    E -->|1| F1[Leer archivo de Riac (7503...)]
+    E -->|1| F1["Leer archivo de Riac (7503...)"]
     F1 --> F2[Filtrar con Obligados]
     F2 --> F3[[Filtra_anotar]]
 
