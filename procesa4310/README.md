@@ -49,7 +49,7 @@ flowchart TD
     %% Escenario 1
     E -->|1| F1["Leer archivo de Riac (7503...)"]
     F1 --> F2["Filtrar con Obligados"]
-    F2 --> F3[["Filtra_anotar<br/><a href='./Filtra_anotar.svg'>Ver subflujo</a>"]]
+    F2 --> F3[["Filtra_anotar<br/><a href='https://www.plantuml.com/plantuml/svg/bLRRZjis47tNLmpGXpX06kXkUPC6qOrv2Pe2c_QreAbPBNTfZaDINRZ5Vao_8P-G7ojaUG59Ng5UFUhCd3CyF1ZmetNSk6wdW4db3F-JQtBSU4uwXN3TRMzKTqVmympsNi4l__Dvho0tubR-HLTWtK6XVRllTkgIJdilzPuRleFhlX6iCrAuePcHRWWEWDP9HT2YHiFLg6NBnNrhgDDDIOeC_CIEtwZ2tlA67gHkmPaEHy2fosWq42GZeC8RtYd7IBjV-GuXDtAYESAlvTy8GRW07e-p9TMCyDmOUlXwAyMzHciXV1lEmTD1MiCFbpel71cqS82IMxBG8FnkwMNUyvvZc9W_eAKTpa7unmCevdvNSPsoe4V8D6XEVyDi7UUf1_q5kjE_88cZrFSUHxoTHS4jFi_CIXQLRCvSh3U9NqoPrrMQ-fdtUA5TbUIjuJj-DEeQHOTQIFuokon-wzk6qSVN5jQndqGUm6TvWv-bnidq9mz6w9cVQPspp0FuZHidXTnpxQOKHSpMuQnWpb8NB66zInLtVCljT8fr4SP1EKRFlC-hekeTlSZGKd5xZD-NxHqwiY-pKYXkxK84DdLHv_C8RCAm28Df1D8ug8Dq4YxQtg5m2yGXYray9qw294_o8KUrTj8TOBMZ1XNrIMcu8_jwFlZxztYi_F3XUQKwOocBvaf1NfIRSb0g-cfk3h2Isg6vuGAFoUninusaPnItfuubJLRLLLtEDKi_seJ5e5cITeOKhDIFxwqKlDVJs99uLayCrOjoDTlKwxbS5UUbNpt9AON2IT8MLafQn-qRuCPWgyY-0S7TZtyLjLDxX_lhrP-Q5pr-Iljq1sqolzXSl1LAskr9etR795TezqfYs-4Bm_p4ifY6Z2LdQGZMMHfF0-qNIHGdaq0BHLspv41LCt_EcvPHd4KJZXjI3Ph5s1JL6KcPfooe9oJVEkmMbdQLiAG-ZtkLHN4suMXEgsTXb67_p6XEU-lHyppl-9BnheQ7YW63hRJEa8Kz6LWdVWG7-FhfdNVr1rUouGO4xonNaCGHh1gqmzC6h0H1ng3TasxmzJlFEjfx7r4ttKxz1m00'>Ver subflujo</a>"]]
 
     %% Escenario 2
     E -->|2| G1["Leer Obligados desde BD"]
