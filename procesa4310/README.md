@@ -39,7 +39,7 @@ flowchart TD
     A(["Inicio del programa (main)"]) --> B["Leer parámetros de entrada (argc, argv)"]
 
     %% Validación de parámetros
-    B -->|No válidos| C["Mostrar uso (modo_uso)<br/><a href='./modo_uso.svg'>Ver subflujo</a>"] --> STOP1([Stop])
+    B -->|No válidos| C["Mostrar uso (modo_uso)<br/><a href='https://www.plantuml.com/plantuml/svg/HSgv3O0m3030tbDu0HQ0XfQQ0H0aGJAouyZF_aWqr7UhnscHmYXQzKXN20fkkETrSpwAqo_mPPWt6KP2XjGzB4iXxSsnDapN1Jnq0AojrnH-0G00'>Ver subflujo</a>"] --> STOP1([Stop])
     B -->|Sí válidos| D[Conectar a BD<br/><a href='https://www.plantuml.com/plantuml/svg/bLRRRkCs47tNLmpGXqs1tK2I9LdERXUh2_aKj5ku1VfAKsE52KLwIQgfM-HZ-Wtx2VcnGf83I7A4EdhacJbdT7Wmu1Vhc75j8u5hXTonlFISS19Xs-xsihtNy644UU_Wf__vl7UG6Nud_jGtODrHehq-j8syfDC-27LWXZMmxHh1EYEu6vgfLfM68w1rGcgeKQ5XSjIoO_oXDhfLLQ6bDl03xRzHXRrZbNuKgWPdMXm1fowZq40GZu0IzwoLZchbVcODGcR4H7E4RyNV246u0FQ_izEo6k6PCVhnjpl17nHQ2-5rE0TFFr8RThpKUUwqGGj7A9ZL5Yg4twr-c_UiunWcPezeTODp4Fxn0FAvtsL44XfqY3OLcjDfcAwZBF6Wkq1tEWlYQ9NutjE8jxN8cSNNcMb1LmMTC-VhJUpdK-PrcIH-wZrTQ5SfM6rOmtgZjiXRL5omjzbbyLlNDem-lhQGH7wyyW1knHvlXSB9z2SFHkYPdmd9QEe1V6N62IuEJBafHHxHTJWhcBEGdCQqSwbaZksOdKwnpiCeACRecVTPcPUTenSPMaXc-_Zzihj7f-tRhEIIMRiGWGt9IJQFm2OCyp2OHY290X8aat3ftJrojq0SqeX6S-8uYBCu6t94b1Fk25UDhb3gBYaLSzh-E1_yqoViApz_Vbs9f3IXgxbIaEN5fXYKygwQcIDS2UNGx1d7FfcjRPaH-XN5tQbZIPEMf2J5NBFmLvim7pGBhPpH4gxay_TQSDRfAQmrVrMF3zMBSeHko7ekLqPPuPSlSb8YTq8h2rTIMCViUs36O2srVG-SkUT_fQwdzWxtrwc_D2zw_9BswGxQf7w-kNWh5BevQ8NAzKakqHwamBh5DuRvXMKn3IcDpz8GhDCacWRQp-DL54y2pQLkgoK7IaBzEMzIhA9qDU7OQrcXMOnDNfwH55b20p8X-TPYkx2qovZ6v3pkPRgAqWb7TLez2wCC-sT6SzfRJvxdUVqBnhl9TaOOOCFJ0woehW-FrKVlfj3AEjCA0vnLg5Z_clbBF7zN0zYzR0paPNSEv0zImFRNsu-UTVhWVK5LjOty3m00'>Ver subflujo</a>]
 
     %% Conexión a BD
