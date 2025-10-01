@@ -17,7 +17,7 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 flowchart TD
 
     %% Inicio
-    A([Inicio del programa (main)]) --> B[Leer parámetros de entrada (argc, argv)]
+    A(["Inicio del programa (main)"]) --> B["Leer parámetros de entrada (argc, argv)"]
 
     %% Validación de parámetros
     B -->|No válidos| C["Mostrar uso (modo_uso)"] --> STOP1([Stop])
