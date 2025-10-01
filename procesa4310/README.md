@@ -16,29 +16,46 @@ Este documento describe el **flujo principal** y permite navegar hacia los **sub
 ```mermaid
 flowchart TD
 
-    A([Inicio]) --> B[Leer parámetros de entrada]
+    %% Inicio
+    A([Inicio del programa (main)]) --> B[Leer parámetros de entrada (argc, argv)]
 
-    B -->|No válidos| MU[Mostrar uso<br/><a href='./modo_uso.svg'>Ver subflujo</a>] --> STOP1([Stop])
-    B -->|Válidos| C[Conectar a BD<br/><a href='./conectaBD.svg'>Ver subflujo</a>]
+    %% Validación de parámetros
+    B -->|No válidos| C[Mostrar uso (modo_uso)] --> STOP1([Stop])
+    B -->|Sí válidos| D[Conectar a BD]
 
-    C -->|Error| ERR1[Error de conexión] --> STOP2([Stop])
-    C -->|OK| D{Escenario}
+    %% Conexión a BD
+    D -->|Error| ERR[Error de conexión] --> STOP2([Stop])
+    D -->|OK| E{Escenario (1,2,3)}
 
-    D -->|1| E1["Leer archivo Riac (7503...)"<br/>Filtrar con Obligados<br/><a href='./Filtra_anotar.svg'>Ver subflujo</a>]
+    %% Escenario 1
+    E -->|1| F1[Leer archivo de Riac (7503...)]
+    F1 --> F2[Filtrar con Obligados]
+    F2 --> F3[[Filtra_anotar]]
 
-    D -->|2| E2[Leer Obligados desde BD<br/>Cruzar con archivo de Riac<br/><a href='./obligadoYcompararTG.svg'>Ver subflujo</a>] --> E1
+    %% Escenario 2
+    E -->|2| G1[Leer Obligados desde BD]
+    G1 --> G2[Cruzar con archivo de Riac]
+    G2 --> G3[[obligadoYcompararTG]]
+    G3 --> F3
 
-    D -->|3| E3[Leer nómina de anotados<br/>Verificar existencia F29<br/><a href='./sqlExisteF29.svg'>Ver subflujo</a>] --> E4[Desanotar<br/><a href='./sqlIns_Desanotar.svg'>Ver subflujo</a>]
+    %% Escenario 3
+    E -->|3| H1[Leer nómina de anotados]
+    H1 --> H2[Verificar existencia F29]
+    H2 --> H3[[sqlExisteF29]]
+    H3 --> H4[Si aplica, desanotar]
+    H4 --> H5[[sqlIns_Desanotar]]
 
-    E1 --> F[Recorrer candidatos a anotar<br/><a href='./Debe_anotar.svg'>Ver subflujo</a>]
+    %% Flujo común después de escenarios
+    F3 --> I[Recorrer candidatos a anotar]
+    H5 --> I
+    I --> I2[[Debe_anotar]]
 
-    F --> G[Generar archivos de salida<br/><a href='./FCreaArchivo.svg'>Ver subflujo</a>]
+    I2 --> J[Generar archivos de salida]
+    J --> J2[[FCreaArchivo]]
 
-    G --> H[Enviar notificación por correo<br/><a href='./iEnviaMail.svg'>Ver subflujo</a>]
+    J2 --> K[Enviar notificación por correo]
+    K --> K2[[iEnviaMail]]
 
-    H --> I([Fin])
-
-
-
+    K2 --> END([Fin])
 
 
