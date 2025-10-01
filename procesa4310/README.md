@@ -20,7 +20,7 @@ flowchart TD
     A([Inicio del programa (main)]) --> B[Leer parámetros de entrada (argc, argv)]
 
     %% Validación de parámetros
-    B -->|No válidos| C["Mostrar uso (modo_uso)]" --> STOP1([Stop])
+    B -->|No válidos| C["Mostrar uso (modo_uso)"] --> STOP1([Stop])
     B -->|Sí válidos| D[Conectar a BD]
 
     %% Conexión a BD
