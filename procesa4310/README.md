@@ -62,7 +62,7 @@ flowchart TD
     H1 --> H2["Verificar existencia F29"]
     H2 --> H3[["sqlExisteF29<br/><a href='https://www.plantuml.com/plantuml/svg/RL7HRjCm57ttLnpUKebENHz0JPMnqZWGgKs6ay83Gf7NE9chDEviPq92V0mVm3SWiHz39ilQ8bui-vnpZ-yzzzfOhcstRs3k6_fL6YkYwOnOQHk1hBkjccwdC3vdoTyYGlo5aNNBDGvSF_xO2wkLySdOFGlTMGGekVryeyoNyTL3iOdZi62R_4bm45ggKY70JN-R4-9dmkAsB2hLICTC7BPKRINhJdEDJ-zfGZzIXYJDetIJX1XVGMXT65dpQ3gR_r-TVLXHnb8sgDzsPjlBYKztOjjPhf7H5Ltc41UYqlk-0uA8fMjaSLZGB5-4QH6bRBrPBLYS4cVFA8vZd0n502oI47q8Jt4CO1wnTR5Cm_XTYW3JsJDE8pRWieLt-VBLwz6S45d1-_thc4g0oPiHx9reuMMFFqS4y9cmIhjDJEO4C5OTY6YCW9UeS_xooBUbh0WvS6sbbQezpH7VpeeySzzi-OKxLIdm8d295iCEHi-Mt_-r6uBk_LQgTgZI42sutjx91uMgTEN-akkQQ-n5Q_XEE86XJZe_QsHw-jMrQCjkt_m1'>Ver subflujo</a>"]]
     H3 --> H4["Si aplica, desanotar"]
-    H4 --> H5[["sqlIns_Desanotar<br/><a href='./sqlIns_Desanotar.svg'>Ver subflujo</a>"]]
+    H4 --> H5[["sqlIns_Desanotar<br/><a href='https://www.plantuml.com/plantuml/svg/RLBBZjem5DtxAsvN0rA8fjDk6jHgtDZCMA8nTHAwZ3p4KACaPcuSf57LZ-ctzCUg42ZGpiRttCSvllBnVUir-gwke7skHDCMpBIwSLuZyTPN1jBkQLrrMmUJ_oV8WKn8fCpAFbc4dSRVlshZqRKHcVHfWPq_ed9F9h0mQ5tfo0HQZkXmIaWKksPjDnrgX6-FFE5BhY2HsKpc2OF99p28_QL5QpTwTlTX-ZeZ_JhdIabroVZSjQk1GYA-DQlEQmIHf5nb899CGYfOGHEPqOBnz008m8Wch8Wb4myoW1whF1i0MmwHnh6GoO1ZcgTqW3Cv5qTAdWX6MK00XZJDgJhr64zZ9HPd2PvcbCahrHcF7scX-8D8CoN_wWnbdYm5PV94Zdbo5kyVxchvRAQ-N1KMN0d9v9W0BEayvocCmZ0C83hQTKJbFe0RTXF0-tTlRmE8Ziu548OXdFFnzE2_TzXeXDif8JkDtdhhcd-DWny4u3mxQf-hbGxxqvK6tdpiBInEne-d1A3rRaT-lYPvSdRG5FKERMsnRpi4qy1EDrvNbOQNFjEu-cxt3jPbhnh56ZSQeJPDgxUc7pXznilzxYutECHxqvHTNVq1'>Ver subflujo</a>"]]
 
     %% Flujo común después de escenarios
     F3 --> I["Recorrer candidatos a anotar"]
