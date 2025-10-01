@@ -24,7 +24,7 @@ flowchart TD
     C -->|Error| ERR1[Error de conexión] --> STOP2([Stop])
     C -->|OK| D{Escenario}
 
-    D -->|1| E1[Leer archivo Riac (7503...)<br/>Filtrar con Obligados<br/><a href='./Filtra_anotar.svg'>Ver subflujo</a>]
+    D -->|1| E1["Leer archivo Riac (7503...)"<br/>Filtrar con Obligados<br/><a href='./Filtra_anotar.svg'>Ver subflujo</a>]
 
     D -->|2| E2[Leer Obligados desde BD<br/>Cruzar con archivo de Riac<br/><a href='./obligadoYcompararTG.svg'>Ver subflujo</a>] --> E1
 
