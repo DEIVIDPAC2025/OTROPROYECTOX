@@ -67,7 +67,7 @@ flowchart TD
     %% Flujo común después de escenarios
     F3 --> I["Recorrer candidatos a anotar"]
     H5 --> I
-    I --> I2[["Debe_anotar<br/><a href='./Debe_anotar.svg'>Ver subflujo</a>"]]
+    I --> I2[["Debe_anotar<br/><a href='https://www.plantuml.com/plantuml/svg/bLRRRjiu47tNLmom3qs1jh1aIPRJ2weRWGB1Tj6qpuiHDLQOKAH3KXkuYtpCViD-Gdzi8Ti193d2EdhKcJbdU7Wqq6VhqBYkbL1GHN-YqWwDvuIJ1DTTjP7ThOQt8z1x1H__v_5UGMhuZVXBNu9rEqdstRPhvJcTzaweBHfiuRfl1EkCuExGpBIgDUo0h1DIGqEA3Cf1IuNyhZ6wKtMkfJRm6zi_WmfxWxL-4Ae1PpeQ0CSkeyY07ms0WZROISUqShzZIv0QCT8SuDVY9u4Vp83xurHQrWCyDKO_VByH_4wHjH2y2wRWyI2DmTsvpdEd3LdOGOvMMwW9VbZzCk-nvpXCZ0zaTKjJ4Fxs0BAftqLOnipl4MrgCiUtGR8AqzY3_WBTyPqVXSjuuJqEU3jB72qzpynojipPb3bRhQD5DcPU5N6yIBp7C-qg13O6MzmRTKsy8yK5limkI_Tzss7quRK5PRY8bXx0bTZGbL0qclxemG0zyJCkKvPu07-WSOABBIetfiX2jWec1LEMCcCHwrqgq665TZp5AWj2Fn-Y9zwdHLRqZfvbQ2xHxkFtjRebf-tBhEGIhPs9mBhCodGQWNKGP84_Za0S-gKVZyAbgrlYReOuO24BfyIH7wLHUiXHgPnmExXeTKrIzqcfqMdxUZhuXm-qh_pqwNcbCc4nMqwL_3JBr_b1AUkhqUpWGYX7PeESzidiR8T6w6SKgsF7d2OhogBCfvhvOhaEieDchfKpMiA5_FLl8pZsUeeQpP_LuuVgMRcIhSlLLAu8qtnHFCb9ITm9hInSI64TsZU0nb0ZjNq37DslVwHknlOUxgzNVsgUzVWfxUCTj4uMsVhihP3hTgiLARTFSa5sAmKr7Rqmp4yiisb8M7II1d-LnE4uq8iiMeRHAD1SwgwUSw0esMBA6-VBC5cEE3PQrcHcOvCL9oHv6ZE_797STzJDBEqYOb5v6lSYMOR9YAC-hfwPKGxxPq9pt5kFdkTv-xyOx_8RSMqC6U2eQh7_H45NKZHOQ_lUkxoIsA81Uo-_ACkDg2Zj_scW7m8urWZVVdn_xrcdjzvdKdNNoly0'>Ver subflujo</a>"]]
 
     I2 --> J["Generar archivos de salida"]
     J --> J2[["FCreaArchivo<br/><a href='./FCreaArchivo.svg'>Ver subflujo</a>"]]
