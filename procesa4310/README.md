@@ -2,10 +2,29 @@
 
 Nombre Shell: Procesa4310.pc
 
-Descripcion: Permite obtener un listado de contribuyente obligados a declarar el formulario F9. La shell bajaObligado.sh, se conecta a la maquina pluton (ambiente de dominio RIAC)
-donde se ejecuta un procedimiento almacenado. Este proceso bajaObligado.sh almacena y deja en una carpeta llamada obligado, un archivo llamado obl_<añomes> con registros de contribuyentes. (En produccion son aprox 1,6mill de registros) 
+Descripcion: Procesa4310.pc
+ Objetivo    : Anotacion masiva de 4310
+ Trabaja con : /DIC2004_008_FOR/BATCH/ADES/Ejecutables
 
-Este documento describe el **flujo principal** y permite navegar hacia los **subflujos auxiliares** del script `bajaObligados`.
+ Escenario 2
+ 1.- Lee obligados sid_ultima_info_                               
+ 2.- Valida presencia de F29 o giro               
+ 3.- Filtra nomina de Riac, los que estan en nomina tienen 7503 activa
+
+ Escenario 3
+ - Lee nomina de posibles anotados y posteriormente busca la presencia de un f29
+   para dejar calendarizado que este sea desanotado.
+ Modificacion : 06/04/2010
+	        Se cambian los meses de marzo, junio, septiembre y diciembre
+                Segun ERD : OIN_SIMNET_ERD_Modifica_anota_4310.doc
+ Modificacion : Cambio de año.
+ Modificacion : Cambio de año 19/12/2017.
+ Modificacion : Cambio de año 19/12/2018.
+ Modificacion : Cambio de año 18/12/2019.
+ Modificacion : Agrega alertas TG 73 + (37,50,5001,60)  02/11/2020
+ Modificacion : Cambio de año 30/12/2020
+
+Este documento describe el **flujo principal** y permite navegar hacia los **subflujos auxiliares** del programa PRO C `Procesa4310`.
 
 ---
 
