@@ -41,7 +41,7 @@ flowchart TD
     T --> U[Generar archivo SinF29]
     U --> V[Imprimir versión y parámetros] --> Z
 
-    P -->|No| W{lEscen ∈ [1,2,3,4,7,10]?}
+    P -->|No| W{"lEscen ∈ [1,2,3,4,7,10]?"}
     W -->|No| V
     W -->|Sí| X[Leer contribuyentes de fpFolios]
     X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://.../cargaArchivoAlertas.svg' target='_blank'>Ver subflujo</a>"]
