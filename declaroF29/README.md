@@ -18,15 +18,15 @@ flowchart TD
     C --> D["<b>modo_uso</b><br/><a href='https://.../modo_uso.svg' target='_blank'>Ver subflujo</a>"]
     D --> Z[Stop]
 
-    B -->|No| E[Asignar lPeriodo = argv[1]]
+    B -->|No| E["Asignar lPeriodo = argv[1]"]
     E --> F{lPeriodo < 201501?}
     F -->|Sí| G[Error periodo inválido] --> Z
-    F -->|No| H[abrir archivos: argv[2], argv[3], argv[4]]
+    F -->|No| H["abrir archivos: argv[2], argv[3], argv[4]"]
 
     H --> I[Asignar lEscen, Debug]
-    I --> J{lEscen válido (1-10)?}
+    I --> J{"lEscen válido (1-10)?"}
     J -->|No| K[Error escenario inválido] --> Z
-    J -->|Sí| L[Crear archivos salida (SinF29, Anotar, FiltroCSEI)]
+    J -->|Sí| L["Crear archivos salida (SinF29, Anotar, FiltroCSEI)"]
 
     L --> M["<b>conectaBD</b><br/><a href='https://.../conectaBD.svg' target='_blank'>Ver subflujo</a>"]
     M --> N["<b>conectaBD_DTE</b><br/><a href='https://.../conectaBD_DTE.svg' target='_blank'>Ver subflujo</a>"]
