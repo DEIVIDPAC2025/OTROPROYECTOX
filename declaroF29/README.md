@@ -13,9 +13,8 @@ flowchart TD
 
     A[Start] --> B[Verificar parámetros argc != 7?]
     B -->|Sí| C[Imprimir versión]
-    C --> D["<b>modo_uso</b><br/><a href='https://.../modo_uso.svg' target='_blank'>Ver subflujo</a>"]
+    C --> D["<b>modo_uso</b><br/><a href='https://www.plantuml.com/plantuml/svg/HSgv3O0m3030tbDuZj2afMO0P9I0WcmS-TaVYORwhdgGHGgZQDCzNI56SCSjZvFprl83V1VAAjE63CDqnTOPf-bb9BI0Xqwe_Maf_080'>Ver subflujo</a>"]
     D --> Z[Stop]
-
     B -->|No| E["Asignar lPeriodo = argv[1]"]
     E --> F{lPeriodo < 201501?}
     F -->|Sí| G[Error periodo inválido] --> Z
