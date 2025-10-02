@@ -24,8 +24,8 @@ flowchart TD
     H --> I[Asignar lEscen, Debug]
     I --> J{"lEscen válido (1-10)?"}
     J -->|No| K[Error escenario inválido] --> Z
-
-    J -->|Sí| L[Crear archivos salida (SinF29, Anotar, FiltroCSEI)<a href='https://www.plantuml.com/plantuml/svg/LSin3e9040NGVaxnIoWiR24nM61YOWKdM60sh5bso31hz52UmeiPjR9-USrcJYql4MvGFkeuXvkG1OkCFWy-vgjKVqRVGLN7OnWOIPP16UwdU62HIMeA7eMNbHEyYz6Li9aJYlxrB0ceMbLHx0xWUx1YNzR4SUEFT6oYoM7DoLW53gVpfQs9qnGyRIOhDPoclCGt'>Ver subflujo</a>"]
+  
+    J -->|Sí| L["Crear archivos salida (SinF29, Anotar, FiltroCSEI)<a href='https://www.plantuml.com/plantuml/svg/LSin3e9040NGVaxnIoWiR24nM61YOWKdM60sh5bso31hz52UmeiPjR9-USrcJYql4MvGFkeuXvkG1OkCFWy-vgjKVqRVGLN7OnWOIPP16UwdU62HIMeA7eMNbHEyYz6Li9aJYlxrB0ceMbLHx0xWUx1YNzR4SUEFT6oYoM7DoLW53gVpfQs9qnGyRIOhDPoclCGt'>Ver subflujo</a>"]
 
 
 
