@@ -42,7 +42,7 @@ flowchart TD
     P -->|No| W{"lEscen ∈ [1,2,3,4,7,10]?"}
     W -->|No| V
     W -->|Sí| X[Leer contribuyentes de fpFolios]
-    X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://.../cargaArchivoAlertas.svg' target='_blank'>Ver subflujo</a>"]
+    X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://www.plantuml.com/plantuml/svg/VP5FJyCm3CNl-HG-Rc93dU2oJKYR60SaJXEtQKAcSJkZDAaSj_pvz2XjDmqqk2Nsoy_FBwkeADfK3dAK4jUI7xWDQqUY68soEe8DOobO8LY2mZLl0QQNrAEnCHtDcCMZvvpHyHSAj2YChuxYqYp03sAuWwoxRwdag1BY4x4DGzsy7zWHZA0eIUF8iIUSm6sMPHCewW4nXh4105YSCK_7AvWj--vzg1a5Qk6A94IO9--OAmb5GB1DLNsUfBubKPQ-2fYylqYZG__XGmL9mBOfYixLRhx_EUSCFikcivi1ekYEb7NaqlUv93OWn0rgYBtrtN65_RNTDh_VsFPlURjfTzd-mf0q-vzdpvqryhOBFNrUbS9Y0GsABgsAGwgrX9mYMenBOuIq4N-At4GDjLcHjqtblW40)'>Ver subflujo</a>"]
     Y --> AA["<b>cargaArchivoAtributos</b><br/><a href='https://.../cargaArchivoAtributos.svg' target='_blank'>Ver subflujo</a>"]
     AA --> AB["<b>poblarDatos</b><br/><a href='https://.../poblarDatos.svg' target='_blank'>Ver subflujo</a>"]
 
