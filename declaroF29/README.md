@@ -27,7 +27,7 @@ flowchart TD
     J -->|Sí| L["Crear archivos salida (SinF29, Anotar, FiltroCSEI)"]
 
     L --> M["<b>conectaBD</b><br/><a href='https://www.plantuml.com/plantuml/svg/RLD1Rjim4Bph5GDT8W694HVeHOABmAg26d2Tfcw1NZVIscPBaygIIeB-AQS-mHyBADc1BVT2WTpPuUnmTECyYM-t6fKrN7cQVewyyffngzlV5ZLZrPfAxVwP8qJKTKLPOOtpqYg1j9v0KctKauLJzQXvhaC3rkpPF2NnbxklPPpcKJOpdeqd0Js8alUUW5tPXaqUHMg5v71kBFX5ESyf_8ODakNkDOs0RBPjH6sLW4Mi85vOE4RJrdRFl5SHvm4jx5inICPfs3flcuYrOoGBsxCPLIdIwYy9bboQoXel5XDSvn6RMgsYIBXXyW4yPnRetQjXGitwT8OrUzTT-PrvssWAZ1VP1HehODTGfMnNTguYiyBL9vHUFRRiwH9kjcv9Ny8LLBEXmXf-KJPO0WHJ3aXC9kWXqzPLLDF0720x6MASTuSFmlGd0lg1-ddml56QaHYBykusxSq_RfvWF60FY87205lydC_FTHoCl_gGzY8wxu5Zzu7ict13GeBXv5sr_5KMMDxFKTmj5cNn0wFHg2zrhdG1MDwVttuUa_14xb5ND0ghhJa_0FT2_rlSQnwgFgQFY_xl2F639ap9SJmalpudx9xYy3s9vBjp7uyosqVnXatTRlKR'>Ver subflujo</a>"]
-    M --> N["<b>conectaBD_DTE</b><br/><a href='https://.../conectaBD_DTE.svg' target='_blank'>Ver subflujo</a>"]
+    M --> N["<b>conectaBD_DTE</b><br/><a href='https://www.plantuml.com/plantuml/svg/PLD1Rjim4Bpp5GDT8W694HVenOABrBA26d3jfdQ1tegDjBRPqgH2KadGF-NK9_XZ1IKhiEMB175dTsU6epldoVfwhr0OpOMdoVJNT9qBBxrYtAlwjq79sDIwa8T_keSIJRSOPKOxRsjfOMjF85livBE1a-MWUYb34xRiMJ_7qPVbrpnAKZ6QQS_QamKzMcdVUm9sOohMgH1oWxWxrmRyAftd17x76l7gy9O8O3JRLrRkfGLRQooYXO5ZL7LfZfCx5l5qdITH6dei-zfgnCCaV3flAi7ACUA5QMTgMKXIyYzPh3ZNXT7U6enncmhMfTm8ORbYyW4yPxPGXpVDX9BLkP8jUzUi_CwyhnI5YLUZArJ6Wbr5XJHDsRc2z0Otdv1x-LIpfskusROcTGsNKScQCgFvLPfW312iwP0OZz529hKhgAIUHS3eJCGmRGuVBTCV0RI2MZrusKd5YBL1lhnFsYiuRHvZs9iU43s60RRuCPzVykYCl_cGj2GQxu5Jzu7HDyiLMRBeAs-g-Syym-fXZcovMEJP6eF109_NQ4FPWXf_ca2i7YvvNCOcN9PxKWKDmjEKtCObxU17ucUGhdZKq5TnkYJAslycX1AAC277cAxpgB_Wzd9eSptT-oocxsv-FCbn6yyxrcMzL_y1'>Ver subflujo</a>"]
 
     N --> O[Reservar memoria datAux]
 
