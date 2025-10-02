@@ -42,7 +42,7 @@ flowchart TD
     P -->|No| W{"lEscen ∈ [1,2,3,4,7,10]?"}
     W -->|No| V
     W -->|Sí| X[Leer contribuyentes de fpFolios]
-    X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://www.plantuml.com/plantuml/svg/VP5FJyCm3CNl-HG-Rc93dU2oJKYR60SaJXEtQKAcSJkZDAaSj_pvz2XjDmqqk2Nsoy_FBwkeADfK3dAK4jUI7xWDQqUY68soEe8DOobO8LY2mZLl0QQNrAEnCHtDcCMZvvpHyHSAj2YChuxYqYp03sAuWwoxRwdag1BY4x4DGzsy7zWHZA0eIUF8iIUSm6sMPHCewW4nXh4105YSCK_7AvWj--vzg1a5Qk6A94IO9--OAmb5GB1DLNsUfBubKPQ-2fYylqYZG__XGmL9mBOfYixLRhx_EUSCFikcivi1ekYEb7NaqlUv93OWn0rgYBtrtN65_RNTDh_VsFPlURjfTzd-mf0q-vzdpvqryhOBFNrUbS9Y0GsABgsAGwgrX9mYMenBOuIq4N-At4GDjLcHjqtblW40)'>Ver subflujo</a>"]
+    X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://www.plantuml.com/plantuml/svg/VL7BJW914BpFL_HHOZ0GJq2C4F5WuaNYZH3JxZHBctbiUXu-_iclyCVCx2u43NgRwQwkggwUXuWIapLGeTIua6h7sIyCISIW8aT3i6Ii1Is29jYQzE9XU0fzDb2gPLDgUkUuOZJyWG8PXV7PK9YfARWU35SmQlyhgZb4yU6UMFk-hbvtR0ZE7X9fT62-FXrX07AmRNg2wu4209WU4HwUvp2UTTqRtp0ADCAMn0UO5EDOHH8AWA2JjUy7gCiaaQMh0XRZJv9YtxzzYu8ae7F9mR0ZN4ysFtMEoCUZuVYo9ubezYoBmBNhGYdSW12M67tehA_tAsmkz2hzdj7vRtXUvlLeSqAaQFypzjXQ8wVRnClbR0cB1QAFQCggsAVQYAyeeCOmAuVsZPgJqycQRm00'>Ver subflujo</a>"]
     Y --> AA["<b>cargaArchivoAtributos</b><br/><a href='https://.../cargaArchivoAtributos.svg' target='_blank'>Ver subflujo</a>"]
     AA --> AB["<b>poblarDatos</b><br/><a href='https://.../poblarDatos.svg' target='_blank'>Ver subflujo</a>"]
 
