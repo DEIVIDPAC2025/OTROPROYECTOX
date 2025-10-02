@@ -26,7 +26,7 @@ flowchart TD
     J -->|No| K[Error escenario inválido] --> Z
     J -->|Sí| L["Crear archivos salida (SinF29, Anotar, FiltroCSEI)"]
 
-    L --> M["<b>conectaBD</b><br/><a href='https://.../conectaBD.svg' target='_blank'>Ver subflujo</a>"]
+    L --> M["<b>conectaBD</b><br/><a href='https://www.plantuml.com/plantuml/svg/RLD1Rjim4Bph5GDT8W694HVeHOABmAg26d2Tfcw1NZVIscPBaygIIeB-AQS-mHyBADc1BVT2WTpPuUnmTECyYM-t6fKrN7cQVewyyffngzlV5ZLZrPfAxVwP8qJKTKLPOOtpqYg1j9v0KctKauLJzQXvhaC3rkpPF2NnbxklPPpcKJOpdeqd0Js8alUUW5tPXaqUHMg5v71kBFX5ESyf_8ODakNkDOs0RBPjH6sLW4Mi85vOE4RJrdRFl5SHvm4jx5inICPfs3flcuYrOoGBsxCPLIdIwYy9bboQoXel5XDSvn6RMgsYIBXXyW4yPnRetQjXGitwT8OrUzTT-PrvssWAZ1VP1HehODTGfMnNTguYiyBL9vHUFRRiwH9kjcv9Ny8LLBEXmXf-KJPO0WHJ3aXC9kWXqzPLLDF0720x6MASTuSFmlGd0lg1-ddml56QaHYBykusxSq_RfvWF60FY87205lydC_FTHoCl_gGzY8wxu5Zzu7ict13GeBXv5sr_5KMMDxFKTmj5cNn0wFHg2zrhdG1MDwVttuUa_14xb5ND0ghhJa_0FT2_rlSQnwgFgQFY_xl2F639ap9SJmalpudx9xYy3s9vBjp7uyosqVnXatTRlKR'>Ver subflujo</a>"]
     M --> N["<b>conectaBD_DTE</b><br/><a href='https://.../conectaBD_DTE.svg' target='_blank'>Ver subflujo</a>"]
 
     N --> O[Reservar memoria datAux]
