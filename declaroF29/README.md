@@ -8,35 +8,50 @@ Tanto para obtener los contribuyentes obligados como para anotar los contribuyne
 
 Este documento describe el **flujo principal** y permite navegar hacia los **subflujos auxiliares** del script `bajaObligados`.
 
----
-# Flujo principal - Proceso Batch `proce4310.sh`
+# Flujo principal - Programa Pro\*C (DeclarF29)
 
 ```mermaid
 flowchart TD
-    A[Inicio] --> B["Validar parámetros(nPeriodo, nEscenario)"]
-    B -->|Archivos no existen| E[["Error<br/><a href='https://www.plantuml.com/plantuml/svg/JSqn3i8m343HtQVm218IUxeK2JOa1axW9cwJoeshsE7y2CJ0_FNqHtDgtZT1qSN0YmlZiq-pz5K3tdMnmyRLQEKJ9dOIuIDy4OJ7v5ovuSmnqpbh8wJedMI0SBFOobGQ_ZHonQZLL6Y0SDbthkc_KOkvlFHpl9Ah3M2kEunSKz_a3G00'>Ver subflujo</a>"]]
-    B -->|Archivos existen| C["Configurar entorno<br (Producción/Desarrollo)"]
-    C --> D[Inicializar logs]
 
-    D --> F[["Revisa_SID_ULTIMA<br/><a href='https://www.plantuml.com/plantuml/svg/RSon2i8m483XFKznWuCAwjw2A5erK5kqEfThSqfAcaXoqK5yTz75nVt__aLWz1nx0qUwwu1r9TVrEJ_9_LAmPaDGnUPYOkUIFyKNYoGdyj1wKcHRZOO2A8B1SrVkizSiQ3MzFLGgagoZDZ9wg0uvJERGkcXvE1u1MM1i3C9lNSjYKzPodHKdkP6hvKgMHIgIRKIlq8Ed40sZSXzhoyReAoeNKX7OtSI2h8gzUGC0'>Ver subflujo</a>"]]
-    F -->|nObligados < nNotNull| E
-    F -->|OK| G[Continuar]
-    G --> H[["Proceso<br/><a href='https://www.plantuml.com/plantuml/svg/dT31IiD040RW-px575k48hIXa1HjHIk5eiMavx1k9idMpOxCJgelvSa74EoBIOCA7cgXjs7uP-PZfa4qIziuM34P3AJ4YaD8syVIjHkAV_jTKCLBH0RDfhPRWe0EZUJ5XlEjhT0BXe4BagXuRfsmPc2iR12c08OycDrxOIk2SNG-J5HyYnxtePzrCq-Y2mhvP8wcrXS3UPL4sH9wdnytpCIWNvwwuSi-I8qUUkdkhQy0uYLL0SwWqTO1xgE90WX2pmfzOKjrLFIVPpmy8Zh5y-UHYxiidsKFYwjrTd-THgDXFl4hP4i5VTyyYEl2XtJHw0HQLq_H5stZlW00'>Ver subflujo</a>"]]
-    H --> I[Forzar anotación 7503 dummy]
-    I --> J["Contar registros (7503, 73, 543)"]
-    J --> K[Ejecutar Procesa4310 con archivos generados]
-    K -->|Error| E
-    K -->|OK| L[Escenario 2?]
-    L -->|Sí| M["Generar archivo AnotaMensual4310<br/>Copiar/comprimir archivos"]
-    L -->|No| N[Comprimir archivos de salida]
-    M --> O[Enviar correo final con resultados]
-    N --> O
-    O --> P[["MarcaUltPerProcesado<br/><a href='https://www.plantuml.com/plantuml/svg/RO-zQiCm601tFSL7A6HhTvj0r5Yb0SaIijtLADBNLa6sZ7x8KFhkfStQ-Ow3E-PYKgbB066IDLCe2fDAqM8sBfBYIq0OwkKzr6ji_fV-4gJXY0biGeUhzIPW1eVmyFKg1Vj-ojuzRZVNaePTqTPY4aogeoE3uTpDYcegsAZbG00o5b1KY_cDSgaFgyBaeui4uFQ92U-ib-9PiyD-ukDPo5bfUMA3d7lPiHEdclOZsxUaiN5PV6b9m-D7XjsBNs7vNO3j7jsr99UuaIEkhYxX1m00'>Ver subflujo</a>"]]
-    P -->|Error| E
-    P -->|OK| Q[Generar CTLFILE para revisión diferida]
+    A[Start] --> B[Verificar parámetros argc != 7?]
+    B -->|Sí| C[Imprimir versión]
+    C --> D["<b>modo_uso</b><br/><a href='https://.../modo_uso.svg' target='_blank'>Ver subflujo</a>"]
+    D --> Z[Stop]
 
-    Q --> R["Programar ejecución con `at` (20h después)"]
-    R --> S[Fin]
+    B -->|No| E[Asignar lPeriodo = argv[1]]
+    E --> F{lPeriodo < 201501?}
+    F -->|Sí| G[Error periodo inválido] --> Z
+    F -->|No| H[abrir archivos: argv[2], argv[3], argv[4]]
 
-    %% Subflujo común de errores
-    E --> S
+    H --> I[Asignar lEscen, Debug]
+    I --> J{lEscen válido (1-10)?}
+    J -->|No| K[Error escenario inválido] --> Z
+    J -->|Sí| L[Crear archivos salida (SinF29, Anotar, FiltroCSEI)]
+
+    L --> M["<b>conectaBD</b><br/><a href='https://.../conectaBD.svg' target='_blank'>Ver subflujo</a>"]
+    M --> N["<b>conectaBD_DTE</b><br/><a href='https://.../conectaBD_DTE.svg' target='_blank'>Ver subflujo</a>"]
+
+    N --> O[Reservar memoria datAux]
+
+    O --> P{lEscen == 5?}
+    P -->|Sí| Q[Leer fpFolios en bucle]
+    Q --> R["<b>sqlExisteF29</b><br/><a href='https://.../sqlExisteF29.svg' target='_blank'>Ver subflujo</a>"]
+    R --> S[Marcar N o S]
+    S --> T[Imprimir estadísticas]
+    T --> U[Generar archivo SinF29]
+    U --> V[Imprimir versión y parámetros] --> Z
+
+    P -->|No| W{lEscen ∈ [1,2,3,4,7,10]?}
+    W -->|No| V
+    W -->|Sí| X[Leer contribuyentes de fpFolios]
+    X --> Y["<b>cargaArchivoAlertas</b><br/><a href='https://.../cargaArchivoAlertas.svg' target='_blank'>Ver subflujo</a>"]
+    Y --> AA["<b>cargaArchivoAtributos</b><br/><a href='https://.../cargaArchivoAtributos.svg' target='_blank'>Ver subflujo</a>"]
+    AA --> AB["<b>poblarDatos</b><br/><a href='https://.../poblarDatos.svg' target='_blank'>Ver subflujo</a>"]
+
+    AB --> AC{lEscen == 10?}
+    AC -->|Sí| AD["<b>nominaAnotar(1-4)</b><br/><a href='https://.../nominaAnotar.svg' target='_blank'>Ver subflujo</a>"] --> V
+    AC -->|No| AE{lEscen == 7?}
+    AE -->|Sí| AF["<b>nominaAnotar(2-3)</b><br/><a href='https://.../nominaAnotar.svg' target='_blank'>Ver subflujo</a>"] --> V
+    AE -->|No| AG["<b>nominaAnotar(lEscen)</b><br/><a href='https://.../nominaAnotar.svg' target='_blank'>Ver subflujo</a>"] --> V
+
+    V --> Z[Stop]
