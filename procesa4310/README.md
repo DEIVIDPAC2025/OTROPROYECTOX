@@ -51,14 +51,12 @@ flowchart TD
 
      F1 --> F2["Filtrar con Obligados<br/><a href='https://www.plantuml.com/plantuml/svg/RL7HQjim57tNLvm5HcteGhf76vScjh8A4fivzlhG5QF6SgVYIDwr36DZdxIlw8yLfmbBj-f1GhhdddFFqLNl9BbXrwBHhID9iJNPVQiVP6rxjYyo5WYZjrgs-gSa6Fv3zquXmYnaGIUfei4X0WtkSBU7_jlP7IASVPsTXOm5iJMDVXX84cwkUSg_y1nfLYopCatmuHAAg1gLyy6bo_1j_ERpYkTvbl-3NvIZ07zKsy59meQlU5oW52AfiiLAV9ed6HYEQvbdQsn4KfMhGgpdbKYNMIKIdXPYAU9vBBBqB_ZcckVyXIel2qGu60uPqmsytb6hZ7VgsiSbBcO-t3Tbu6sU_lWC24YvWGmkGdZ7UFsG0Rsp7LDjh-2bzXGv2ySNsF_1fjODOvqafvss1fErDEfHrfPKZrgDmLYQu1S3MdclsjV9daXu_VTsAwVZRck5Tz6ORtNy4pzaRp4iof51x3hIEqqlOb06JJrE6FGTQUCQh-TZuHoJ_OdtTN0xdKxl9kTu9RgtTPpdOyX-ixt7AsNgOTS-0m00'>Ver subflujo</a>"]
 
-
-
-
     F2 --> F3["Filtra_anotar<br/><a href='https://www.plantuml.com/plantuml/svg/jPD1RnCn48Nl_XNlk16b8BLHfLrLD4f26obGgP6uhgRhoTR1iSDuDl2dE77ZWjJyCUIDe8AcXo9nyS5-VkyR-VaYAObsQu-tpgjGJI4gYL6ddh7eRfU-MqLCMCbxiX4l_nAQti2KSsO1INFdjX6MmK65BA58xBdHsgwathgMWt8wzaa7bJ7bWZSa911kNLA92OdRtVS0TPjO6UEMAEv_Z7VVh6iZpd4sV7toPW2zuu1YiViwC41voO6poQ_mKGQpCTLPVQnVj3B0tcag4WNq-UD19w2SnpRX1JXi7GdMv3mutwdwuwHnOm0ErYtDVdsC-1p0f_7-3zpmz1bqmzCdyGxu_1DVEOuXHUzitu7K-JuPHNwT8voT7EMamKCHg4laynuiApTAbXxDCrrnqoa9qYS_2wcUSDfNjJBi4wDu7m_f6d6ttCzU_QQxx4Wi_L7hH9aM771r_MxwQdGplffzkAuNe_biCgfCURDlCacM-DXM-OF4ZRdWOBkr_ma0'>Ver subflujo</a>"]
 
     %% Escenario 2
     E -->|2| G1["Leer Obligados desde BD"]
-    G1 --> G2["Cruzar con archivo de Riac"]
+    G1 --> G2["Cruzar con archivo de Riac<br/><a href='https://www.plantuml.com/plantuml/svg/VPBRIiD054NVvois1Ms26b8VKohM9cX0KacRleGWqsJQ3YGpTIuL_2U_mX-JflLAz6qk-wnz3ljSQqELiKsDKjaNEf5YhCeDtyaq7az8-qb843TRnHkkq8jcaoWPf_4KbyYpINWE8HikAARBcgzf9JKM6idXBUMqB7f34kYd-exHYgb86rf9vrH7Iadb3Wbvtl2QmM6Yj4mOHOyA5wCHZBBC1TTmPc-lBW48m5TmIhfa1vsNnN7uEBsvZs_7uTIZIkKYgbd3X9757j6VzLsO3HEV3218C4A2Cmo6Xtj5JPuK5rUxnnQNPdECyDiapURTyd213dcuoFsYk-2ZtTmlEWh_66P8MjP-_90jxVgluO1lQQNPtFCyV223MU_G4HCLNtq14vnWuFk-luVw_oCVg6vJfc3QA5iQgoYI8nS8LglQwesZJIMjSN_P7GzCLCVO4-d-MA-lBTfs-7YU5xHUH1kv9TTCLBQftm40'>Ver subflujo</a>"]
+
     G2 --> G3["obligadoYcompararTG<br/><a href='https://www.plantuml.com/plantuml/svg/bPBDIWCn4CVlUOfXGMWF5Tk3XrsebLfxKOIs2fvaTfDjKv9CcIIY3-Kp2FfYafLsMzoBjoJp__WnPE83SeZM09L6hr7ISqLsXuoycekWWr6mZ6LjufPWq2aIJOGG-PIS3nmrWoDRil8W5I1N6_rAkMZD_kNiujB8y_0MEbw9fHW0np0bjvgVI6jjGjFPlXP2vDSbQzuNTRL0GWNbAzOXCYRFGbN4h1ZSmrvVY7oM9ALcM3oku1rkda2vly79FrNCs9PATJgURLKL0p9KPD590f5vuW23sEeQil7HdLXcXH2wXjxNvuoPEDKdtrKVmaOvw2s_F_e28B-ZDMItQ0o1CMXH8Y1uxOEo2CEi4Cf9NNU3L6Gj38QZmuuRa1CC6BUxJjCEh9JoFwpH4TOz-PIU4F2mnDzAIR1MJgL3aVuMxSH4EHcj-G40'>Ver subflujo</a>"]
     G3 --> F3
 
